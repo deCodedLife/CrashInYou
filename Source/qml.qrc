@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../Forms/main.qml</file>
+        <file>../Graphics/logo.png</file>
+        <file>../Forms/MainWindow.qml</file>
+        <file>../Forms/LoadScreen.qml</file>
+        <file>../Forms/Colors.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>../Forms/LeftPanel.qml</file>
+        <file>../Forms/ListButton.qml</file>
+        <file>../Graphics/neron_icon.jpg</file>
+        <file>../Graphics/videocam-white-48dp.svg</file>
+        <file>../Forms/Contact.qml</file>
+        <file>../Graphics/TomyRoYT.jpg</file>
+    </qresource>
+</RCC>
