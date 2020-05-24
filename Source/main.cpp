@@ -1,3 +1,4 @@
+#include <QApplication>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -6,12 +7,16 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-
     qmlRegisterType<MainApi>("CoreApi", 0, 1, "CoreApi");
     qmlRegisterType<LoadScreenText>("LoadScreenText", 0, 1, "LoadScreenText");
 
-    QGuiApplication app(argc, argv);
+    #ifdef __linux__
+        QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+        QApplication app(argc, argv);
+    #elif
+        QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+        QGuiApplication app(argc, argv);
+    #endif
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/Forms/main.qml"));
