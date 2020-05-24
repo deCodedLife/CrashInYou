@@ -1,4 +1,4 @@
-QT += quick network sql svg
+QT += widgets quick network sql svg
 
 CONFIG += c++11
 
