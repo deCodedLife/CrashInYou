@@ -6,7 +6,8 @@ Item {
 
     property string image_link: ""
     property string nickName: ""
-    property string youtubeLink: ""
+    property string link: ""
+    property string linkType: ""
 
     RowLayout {
         anchors.fill: parent
@@ -16,13 +17,14 @@ Item {
             width: 72
             height: 72
             layer.enabled: true
+            sourceSize: Qt.size(72,72)
             layer.effect: OpacityMask { maskSource: mask }
         }
 
         Rectangle {
             id: mask
-            width: 48
-            height: 48
+            width: 72
+            height: 72
             radius: 5
             visible: false
             antialiasing: true
@@ -44,8 +46,8 @@ Item {
             Text {
                 color: colors.colorAccent
                 font.pixelSize: 18
+                text: "<a href='"+link+"' style='text-decoration: none'>"+linkType+"</a>"
                 Layout.fillWidth: true
-                text: "<a href='"+youtubeLink+"' style='text-decoration: none'>Youtube канал</a>"
                 linkColor: colors.colorAccent
                 onLinkActivated: Qt.openUrlExternally(youtubeLink)
             }

@@ -16,13 +16,22 @@ Item {
         {
             "image_link" : "qrc:/Graphics/neron_icon.jpg",
             "nickName" : "Dark Light Neron",
-            "YoutubeLink" : "https://www.youtube.com/user/Neron9463/videos"
+            "link" : "https://www.youtube.com/user/Neron9463/videos",
+            "linkType" : "Youtube канал"
         },
         {
             "image_link" : "qrc:/Graphics/TomyRoYT.jpg",
             "nickName": "TomyRoYT",
-            "YoutubeLink" : "https://www.youtube.com/channel/UCF0vE0MCE7LgoBLjYFhyiRA/videos"
+            "link" : "https://www.youtube.com/channel/UCF0vE0MCE7LgoBLjYFhyiRA/videos",
+            "linkType" : "Youtube канал"
+        },
+        {
+            "image_link" : "qrc:/Graphics/purp1espace.jpg",
+            "nickName" : "Purp1espace",
+            "link" : "https://t.me/purp1espace",
+            "linkType" : "Telegram"
         }
+
     ]
 
     Rectangle {
@@ -149,7 +158,8 @@ Item {
                         height: 100
                         image_link: modelData["image_link"]
                         nickName: modelData["nickName"]
-                        youtubeLink: modelData["YoutubeLink"]
+                        link: modelData["link"]
+                        linkType: modelData["linkType"]
                     }
                 }
             }

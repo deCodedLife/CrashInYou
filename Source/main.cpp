@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     #ifdef __linux__
         QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
         QApplication app(argc, argv);
-    #elif
+    #else
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
         QGuiApplication app(argc, argv);
     #endif
